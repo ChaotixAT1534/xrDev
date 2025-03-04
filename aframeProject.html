@@ -87,9 +87,9 @@
       <a-entity environment="preset: contact; lighting: none; shadow: none; lightPosition: 0 2.15 0"
                 hide-in-ar-mode></a-entity>
 
-      <a-entity id="dino" position="-1 0 -3" scale="0.5 0.5 0.5">
+      <a-entity id="place" position="-1 0 -3" scale="0.5 0.5 0.5">
         <a-entity position="0 2.15 0" rotation="0 55 0"
-                  gltf-model="#spinosaurus"
+                  gltf-model="#mcdonald"
                   animation-mixer
                   shadow="cast: true; receive: false"></a-entity>
       </a-entity>
@@ -104,7 +104,7 @@
                       shadowCameraBottom: -5;
                       shadowCameraTop: 5;"
                id="light"
-               target="dino"
+               target="place"
                position="-5 3 1.5"></a-light>
 
       <!-- This shadow-receiving plane is only visible in AR mode. -->
