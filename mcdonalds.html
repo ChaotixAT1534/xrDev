@@ -100,8 +100,8 @@
     </div>
 
     <a-scene fog="type: linear; color: yellow; density: 0.005">
-      <a-assets>
-        <a-asset-item id="mcdonalds" src="mcdonalds/scene.gltf"></a-asset-item>
+      <a-assets timeout="30000">
+        <a-asset-item id="mcdonald" src="mcdonalds/scene.gltf" response-type="arraybuffer"></a-asset-item>
       </a-assets>
 
       <!-- Player. -->
