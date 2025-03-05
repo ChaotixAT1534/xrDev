@@ -120,8 +120,8 @@
         <a-asset-item id="mcdonald" src="mcdonalds/scene.gltf" response-type="arraybuffer"></a-asset-item>
          <a-asset-item id="character1" src="Teen1/character1.gltf" response-type="arraybuffer"></a-asset-item>
          <a-asset-item id="character2" src="Teen2/character2.gltf" response-type="arraybuffer"></a-asset-item>
-        <a-sound src="teen1aud.mp3" autoplay="true"
-                 position="-3 0 0"></a-sound>
+        <audio id="sound1" src="teen1aud.mp3" preload="true"></audio>
+                
       </a-assets>
 
       <!-- Player. -->
@@ -166,7 +166,10 @@
         <a-entity position="0 0 0" rotation="0 55 0"
                   gltf-model="#character1"
                   animation-mixer
-                  shadow="cast: true; receive: false"></a-entity>
+                  shadow="cast: true; receive: false"
+                sound="src: #sound1"
+                  sound-events>
+        </a-entity>
       </a-entity>
 
           <a-entity id="talk2" position="-6 .9 0" scale=".5 .5 .5">
