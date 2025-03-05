@@ -25,6 +25,7 @@
     <!-- Star system -->
     <script src="https://cdn.jsdelivr.net/gh/matthewbryancurtis/aframe-star-system-component@db4f1030/index.js"></script>
 
+    
     <style>
       @keyframes fadeIn {
         0% {
@@ -82,6 +83,20 @@
               el.components.sound.playSound();
               isPlaying = true;
             }
+          });
+        }
+      });
+      </script>
+
+     <script>
+      AFRAME.registerComponent('sound-events', {
+        init: function () {
+          var el = this.el;  // <a-box>
+          el.addEventListener('click', function () {
+            el.components.sound.playSound();
+          });
+          el.addEventListener('mouseleave', function () {
+            el.components.sound.pauseSound();
           });
         }
       });
