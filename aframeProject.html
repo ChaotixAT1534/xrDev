@@ -121,6 +121,7 @@
          <a-asset-item id="character1" src="Teen1/character1.gltf" response-type="arraybuffer"></a-asset-item>
          <a-asset-item id="character2" src="Teen2/character2.gltf" response-type="arraybuffer"></a-asset-item>
         <audio id="sound1" src="teen1aud.mp3" preload="true"></audio>
+         <audio id="sound2" src="teen2aud.mp3" preload="true"></audio>
                 
       </a-assets>
 
@@ -176,7 +177,10 @@
         <a-entity position="0 0 0" rotation="0 55 0"
                   gltf-model="#character2"
                   animation-mixer
-                  shadow="cast: true; receive: false"></a-entity>
+                  shadow="cast: true; receive: false"
+                  sound="src: #sound2"
+                  sound-events>
+          </a-entity>
             
       </a-entity>
 
